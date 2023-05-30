@@ -1,9 +1,9 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: "16.x"
+  # install:
+  #   runtime-versions:
+  #     nodejs: "16.x"
   pre_build:
     commands:
       - echo "Checking Node Version"
