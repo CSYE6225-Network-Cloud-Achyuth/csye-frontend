@@ -1,18 +1,18 @@
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - echo "Running NPM clean install"
-        - npm ci
-    build:
-      commands:
-        - echo "Building static files...."
-        - npm run build
-  artifacts:
-    baseDirectory: dist
-    files:
-      - "**/*"
-  cache:
-    paths:
-      - node_modules/**/*
+version: 1.0
+
+phases:
+  pre_build:
+    commands:
+      - echo "Installing base packages"
+      - npm install
+
+  build:
+    commands:
+      - echo "Generating static files"
+      - npm run build
+
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
