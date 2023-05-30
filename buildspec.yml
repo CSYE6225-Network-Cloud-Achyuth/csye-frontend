@@ -1,8 +1,14 @@
 version: 0.2
 
 phases:
+  install:
+
   pre_build:
     commands:
+      - echo "Checking Node Version"
+      - node -v
+      - echo "Checking NPM Version"
+      - npm -v
       - echo "Installing base packages"
       - npm install
 
